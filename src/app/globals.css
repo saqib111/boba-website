@@ -1,26 +1,246 @@
 @import "tailwindcss";
 
+/* ========================================
+   BOBA WEBSITE DESIGN TOKENS
+======================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Base colors */
+    --background: #fffafb;
+    --foreground: #2f2028;
+
+    /* Surface colors */
+    --surface: #ffffff;
+    --surface-soft: #fff3f7;
+    --surface-muted: #fce8ef;
+
+    /* Brand colors */
+    --primary: #dd5b8b;
+    --primary-hover: #ca4779;
+    --primary-light: #f9d9e5;
+    --primary-foreground: #ffffff;
+
+    /* Secondary colors */
+    --secondary: #6f4d5d;
+    --secondary-hover: #593c49;
+    --secondary-foreground: #ffffff;
+
+    /* Text colors */
+    --text-primary: #2f2028;
+    --text-secondary: #6f5b64;
+    --text-muted: #94828a;
+    --text-inverse: #ffffff;
+
+    /* Utility colors */
+    --border: #efd5df;
+    --border-strong: #e7bbc9;
+    --ring: #dd5b8b;
+
+    --success: #23875f;
+    --warning: #c98318;
+    --danger: #d7465f;
+
+    /* Shadows */
+    --shadow-xs: 0 1px 2px rgb(47 32 40 / 4%);
+    --shadow-sm:
+        0 2px 8px rgb(47 32 40 / 5%),
+        0 1px 2px rgb(47 32 40 / 4%);
+    --shadow-md:
+        0 10px 30px rgb(156 69 101 / 9%),
+        0 2px 8px rgb(47 32 40 / 5%);
+    --shadow-lg:
+        0 20px 50px rgb(156 69 101 / 12%),
+        0 4px 14px rgb(47 32 40 / 6%);
+
+    /* Border radius */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-full: 9999px;
+
+    /* Layout */
+    --container-width: 1360px;
+    --header-height: 5rem;
+
+    /* Animation */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 400ms ease;
 }
 
+/*
+    Tailwind CSS v4 theme mapping.
+
+    These variables create utilities such as:
+    bg-background
+    text-foreground
+    bg-primary
+    text-muted-foreground
+    border-border
+*/
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --font-heading: var(--font-heading);
+    --font-heading: var(--font-heading);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-surface: var(--surface);
+    --color-surface-soft: var(--surface-soft);
+    --color-surface-muted: var(--surface-muted);
+
+    --color-primary: var(--primary);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-light: var(--primary-light);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-hover: var(--secondary-hover);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-muted: var(--text-muted);
+    --color-text-inverse: var(--text-inverse);
+
+    --color-border: var(--border);
+    --color-border-strong: var(--border-strong);
+    --color-ring: var(--ring);
+
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-danger: var(--danger);
+
+    --radius-sm: var(--radius-sm);
+    --radius-md: var(--radius-md);
+    --radius-lg: var(--radius-lg);
+    --radius-xl: var(--radius-xl);
+    --radius-2xl: var(--radius-2xl);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ========================================
+   BASE STYLES
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body), sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading), sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+    cursor: pointer;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+::selection {
+    background: var(--primary-light);
+    color: var(--foreground);
+}
+
+/* ========================================
+   REUSABLE GLOBAL CLASSES
+======================================== */
+
+.site-container {
+    width: min(calc(100% - 2rem), var(--container-width));
+    margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+    .site-container {
+        width: min(calc(100% - 4rem), var(--container-width));
+    }
+}
+
+@media (min-width: 1280px) {
+    .site-container {
+        width: min(calc(100% - 6rem), var(--container-width));
+    }
+}
+
+.section-spacing {
+    padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.section-heading {
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    color: var(--text-primary);
+}
+
+.section-description {
+    max-width: 42rem;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.focus-ring {
+    outline: none;
+    transition:
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.focus-ring:focus-visible {
+    box-shadow:
+        0 0 0 3px var(--background),
+        0 0 0 6px var(--ring);
 }
