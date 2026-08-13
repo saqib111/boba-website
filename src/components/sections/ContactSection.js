@@ -70,7 +70,7 @@ function ContactDetailCard({
     return (
         <Wrapper
             href={href}
-            className="group flex items-start gap-4 rounded-[1.35rem] border border-border bg-surface/80 p-4 text-left shadow-[var(--shadow-xs)] backdrop-blur-sm transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[var(--shadow-sm)]"
+            className="group flex min-w-0 items-start gap-3 rounded-[1.35rem] border border-border bg-surface/80 p-4 text-left shadow-[var(--shadow-xs)] backdrop-blur-sm transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-[var(--shadow-sm)]"
         >
             <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-primary-light text-primary transition-transform duration-300 group-hover:scale-105">
                 <Icon
@@ -85,12 +85,12 @@ function ContactDetailCard({
                     {eyebrow}
                 </p>
 
-                <p className="mt-1 font-heading text-base font-extrabold tracking-[-0.025em] text-text-primary">
+                <p className="mt-1 break-words text-sm font-bold leading-5 text-text-primary sm:text-[0.95rem]">
                     {title}
                 </p>
 
                 {description && (
-                    <p className="mt-1 text-sm leading-6 text-text-secondary">
+                    <p className="mt-1 break-words text-sm leading-6 text-text-secondary">
                         {description}
                     </p>
                 )}
@@ -98,7 +98,7 @@ function ContactDetailCard({
 
             {href && (
                 <ArrowUpRight
-                    size={17}
+                    size={16}
                     className="mt-1 shrink-0 text-text-muted transition-[color,transform] duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary"
                     aria-hidden="true"
                 />
@@ -226,7 +226,7 @@ export default function ContactSection() {
                                     href={contactConfig.address.mapUrl}
                                 />
 
-                                <div className="grid gap-3 sm:grid-cols-2">
+                                <div className="grid gap-3 md:grid-cols-2">
                                     <ContactDetailCard
                                         icon={Phone}
                                         eyebrow="Call us"
