@@ -10,7 +10,7 @@ import {
 export const luckyDrawConfig = {
     title: "The Mega Lucky Draw",
     description:
-        "Spend PKR 990 or more in a single order and receive an exclusive entry code for a chance to win exciting prizes.",
+        "Spend INR 990 or more in a single order and receive an exclusive entry code for a chance to win exciting prizes.",
     minimumOrder: 990,
 
     /*
@@ -74,7 +74,7 @@ export const luckyDrawPrizes = [
     },
     {
         id: 5,
-        title: "PKR 10,000 Gift Cards",
+        title: "INR 10,000 Gift Cards",
         description:
             "Gift vouchers redeemable for café and shopping experiences.",
         quantity: 5,
@@ -98,7 +98,7 @@ export const luckyDrawRules = [
     {
         id: 1,
         title: "Place a qualifying order",
-        description: "Spend at least PKR 990 in one bill.",
+        description: "Spend at least INR 990 in one bill.",
         icon: Store,
     },
     {

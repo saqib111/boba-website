@@ -414,7 +414,7 @@ export default function LuckyDrawSection() {
                                 </h2>
 
                                 <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg">
-                                    Spend PKR{" "}
+                                    Spend INR{" "}
                                     {luckyDrawConfig.minimumOrder} or more
                                     and receive an exclusive entry code
                                     for a chance to win our biggest prizes
@@ -730,7 +730,7 @@ export default function LuckyDrawSection() {
                                 aria-hidden="true"
                             />
 
-                            Minimum order: PKR{" "}
+                            Minimum order: INR{" "}
                             {luckyDrawConfig.minimumOrder}
                         </span>
 

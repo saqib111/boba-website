@@ -164,7 +164,7 @@ function ProductCard({ item, index, shouldReduceMotion }) {
                         </p>
 
                         <p className="mt-1 font-heading text-xl font-extrabold tracking-[-0.03em] text-primary">
-                            PKR {item.price}
+                            INR {item.price}
                         </p>
                     </div>
 
