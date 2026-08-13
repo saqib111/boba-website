@@ -4,12 +4,12 @@ export const siteConfig = {
     description:
         "Freshly prepared bubble tea made with premium ingredients, exciting flavours, and chewy tapioca pearls.",
     url: "https://example.com",
-    email: "hello@example.com",
-    phone: "+92 300 0000000",
-    address: "Pakistan",
+    email: "support.boba.in@gmail.com",
+    phone: "+918828888377",
+    address: "Mumbai, India",
     socialLinks: {
-        instagram: "",
-        facebook: "",
-        tiktok: "",
+        instagram: "https://www.instagram.com/bobaoclockindia/",
+        threads: "https://www.threads.com/@bobaoclockindia",
+        youtube: "https://studio.youtube.com/channel/UCHLkngIStUExGXhTabW2Jew",
     },
 };

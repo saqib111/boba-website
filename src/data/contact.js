@@ -1,41 +1,33 @@
 export const contactConfig = {
     address: {
         line1: "Boba O'Clock",
-        line2: "Main Market, Lahore",
-        country: "Punjab, Pakistan",
-        mapUrl: "https://maps.google.com",
+        line2: "Shop No. 2, Ground Floor, Amboli Village, Andheri(West), Mumbai, 400050",
+        country: "Mumbai, India",
+        mapUrl: "google.com/maps/place/BOBA+O'CLOCK/data=!4m2!3m1!1s0x0:0x93c421da70d45012?sa=X&ved=1t:2428&ictx=111",
     },
 
-    phone: "+92 300 1234567",
-    phoneHref: "tel:+923001234567",
+    phone: "+918828888377",
+    phoneHref: "tel:+918828888377",
 
     email: "hello@bobaoclock.com",
-    emailHref: "mailto:hello@bobaoclock.com",
+    emailHref: "mailto:support.boba.in@gmail.com",
 
     whatsapp: {
-        number: "923001234567",
+        number: "918828888377",
         message:
             "Hello Boba O'Clock! I would like to place an order.",
     },
 
     openingHours: [
         {
-            days: "Monday – Thursday",
-            hours: "11:00 AM – 10:00 PM",
-        },
-        {
-            days: "Friday",
-            hours: "2:00 PM – 11:00 PM",
-        },
-        {
-            days: "Saturday – Sunday",
+            days: "Monday – Sunday",
             hours: "11:00 AM – 11:00 PM",
         },
     ],
 
     socialLinks: {
-        instagram: "https://instagram.com",
-        facebook: "https://facebook.com",
-        tiktok: "https://tiktok.com",
+        instagram: "https://www.instagram.com/bobaoclockindia/",
+        threads: "https://www.threads.com/@bobaoclockindia",
+        tiktok: "https://studio.youtube.com/channel/UCHLkngIStUExGXhTabW2Jew",
     },
 };
