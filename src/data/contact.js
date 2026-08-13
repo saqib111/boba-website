@@ -9,7 +9,7 @@ export const contactConfig = {
     phone: "+918828888377",
     phoneHref: "tel:+918828888377",
 
-    email: "hello@bobaoclock.com",
+    email: "support.boba.in@gmail.com",
     emailHref: "mailto:support.boba.in@gmail.com",
 
     whatsapp: {
